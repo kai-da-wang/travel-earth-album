@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#060d17"><title>同游 · 把我们的足迹，留在星球上</title><meta name="description" content="属于两个人的旅行地球相册。点亮中国，珍藏每一程。"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23091524' stroke='%23edc985' stroke-width='2'/%3E%3Cpath d='M32 47 16 31C5 17 26 10 32 23 38 10 59 17 48 31Z' fill='%23edc985'/%3E%3C/svg%3E">
+<style>/*__CSS__*/</style></head>
+<body>
+<header><a class="brand" href="#" aria-label="同游 · dsk 首页"><span class="brand-orbit" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="22" stroke="currentColor" stroke-opacity=".55" stroke-width=".9"/><ellipse cx="32" cy="32" rx="30" ry="10.5" transform="rotate(-32 32 32)" stroke="currentColor" stroke-opacity=".62" stroke-width=".85"/><text x="31" y="38.5" text-anchor="middle" class="brand-initials">dsk</text><path d="M50 9.5 51.2 13.8 55.5 15 51.2 16.2 50 20.5 48.8 16.2 44.5 15 48.8 13.8Z" fill="currentColor"/><circle cx="12.5" cy="43" r="1.6" fill="currentColor"/></svg></span><span>同游<span class="brand-en">OUR LITTLE PLANET</span></span></a><div class="header-center">世界很大，幸好身边是你。</div><div class="header-actions"><button class="replay-intro" id="replayIntro">重看开场</button><button class="quiet" id="backupBtn">相册备份 <span>↗</span></button></div></header>
+<main>
+ <section class="universe" aria-label="旅行地球">
+  <div class="cosmic-backdrop" aria-hidden="true"></div>
+  <div class="intro"><div class="eyebrow"><i></i> TWO OF US · A WORLD OF MEMORIES</div><h1>走过的风景，<br>都有<span>你。</span></h1><p>把平凡日子里的闪光，留在这颗星球。</p></div>
+  <div id="globe" role="img" aria-label="可拖动旋转的中国旅行地球，地点也可从下方列表选择"></div>
+  <div id="loading" class="loading"><span class="spinner"></span>正在点亮我们的星球…</div>
+  <div class="globe-caption"><span class="tiny-label">OUR WORLD / 01</span><span class="coordinates" id="coordinates">35.00° N &nbsp; 105.00° E</span></div>
+  <div class="globe-controls"><button id="homeBtn" title="回到中国" aria-label="回到中国">⌖</button><span></span><button id="zoomIn" title="放大" aria-label="放大地球">＋</button><button id="zoomOut" title="缩小" aria-label="缩小地球">−</button><span></span><button id="rotateBtn" title="自动旋转" aria-label="开启自动旋转" aria-pressed="false">⏵</button></div>
+  <div class="gesture-hint">拖动旋转 <b>·</b> 滚轮缩放 <b>·</b> 点击中国地图添加足迹</div>
+  <div class="legend"><span><i class="gold"></i> 点亮中国</span><span><i class="blue"></i> 我们的足迹</span></div>
+ </section>
+ <aside class="memory-panel">
+  <div class="panel-top"><span class="eyebrow">THE PLACES WE KEEP</span><span class="heart">♡</span></div>
+  <div class="panel-title"><h2>我们的足迹</h2><button id="addBtn" class="icon-btn" aria-label="添加旅行地点">＋</button></div>
+  <div class="stats"><div><strong id="placeCount">00</strong><span>个地点</span></div><div><strong id="photoCount">00</strong><span>张回忆</span></div><div class="stats-quote">一起出发<br>慢慢收藏</div></div>
+  <div class="selected-place"><div><span class="tiny-label" id="placeTag">下一段故事</span><h3 id="placeName">杭州</h3></div><span class="place-symbol">⌖</span></div>
+  <p class="place-sub" id="placeSub">30.27° N / 120.16° E</p>
+  <div id="albumBook" class="album-book" hidden>
+   <div class="album-heading"><span>我们的立体纪念册</span><span>纸页翻动 · 点击放大</span></div>
+   <div id="gallery" class="gallery" tabindex="0" role="region" aria-label="旅行立体画册，可拖动纸页或用方向键翻页"></div>
+   <div class="album-navigation"><button id="albumPrev" class="icon-btn" aria-label="画册上一页">‹</button><span id="albumCounter" aria-live="polite">01 / 01</span><button id="albumNext" class="icon-btn" aria-label="画册下一页">›</button></div>
+  </div>
+  <div id="emptyMemory" class="empty-memory"><span class="empty-icon">＋</span><h4>让这里，成为我们的回忆</h4><p>放入你们在这里的照片，<br>下次点亮它，故事就会浮现。</p></div>
+  <div id="memoryInfo" class="memory-info" hidden><time id="memoryDate"></time><p id="memoryNote"></p></div>
+  <button id="uploadBtn" class="primary"><span>＋</span> 添加我们的照片</button>
+  <button id="editBtn" class="text-btn">记录日期与心情 <span>↗</span></button>
+  <button id="deleteRegionBtn" class="delete-region" hidden>删除这个地区</button>
+  <div class="local-note"><span>◈</span> 私人收藏 · 照片仅保存在当前浏览器</div>
+ </aside>
+</main>
+<section class="journey-strip"><div class="strip-heading"><div><span class="tiny-label">COLLECT MOMENTS, NOT MILES</span><h2>下一站，还是和你。</h2></div><span id="listHint">选一个地方，开始收藏</span></div><div id="places" class="place-list" aria-label="旅行地点"></div></section>
+<footer><span>每一个坐标，都是我们。</span><span>MADE FOR TWO <span class="footer-star">✧</span> KEEP IT FOREVER</span></footer>
+<input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp,image/gif,image/avif" multiple hidden><input type="file" id="importInput" accept=".json,application/json" hidden>
+<dialog id="placeDialog"><form id="placeForm"><div class="dialog-head"><div><span class="tiny-label">A NEW MEMORY</span><h2>把故事留在这里</h2></div><button type="button" class="icon-btn" data-close aria-label="关闭">×</button></div><label>旅行地点<input id="cityInput" list="cityList" placeholder="输入城市，如：成都" required maxlength="40" autocomplete="off"><datalist id="cityList"></datalist></label><p class="form-tip" id="locationTip">从城市建议中选择；也可关闭窗口，在中国地图上点击准确位置。</p><div class="form-row"><label>旅行日期<input id="dateInput" type="date"></label></div><label>那天的心情<textarea id="noteInput" placeholder="那天的风、一起走过的路，还有身边的你……" maxlength="600" rows="4"></textarea></label><div class="dialog-actions"><button id="deletePlace" type="button" class="danger" hidden>删除这个地点</button><button type="submit" class="primary">保存这段回忆</button></div><p class="form-error" id="formError" role="alert"></p></form></dialog>
+<dialog id="backupDialog"><div class="dialog-head"><div><span class="tiny-label">KEEP IT FOREVER</span><h2>给回忆留一份备份</h2></div><button class="icon-btn" data-close aria-label="关闭">×</button></div><p class="backup-copy">照片保存在当前电脑、当前浏览器中。清理浏览器数据可能会移除相册，请定期导出备份。</p><button id="exportBtn" class="primary">导出完整相册</button><button id="importBtn" class="secondary">导入已有备份</button><p class="form-tip">备份包含照片、地点、日期和心情。换电脑时，打开本页面后导入即可。</p></dialog>
+<dialog id="lightbox"><button class="lightbox-close icon-btn" data-close aria-label="关闭照片">×</button><button id="prevPhoto" class="lightbox-prev icon-btn" aria-label="上一张">‹</button><figure><img id="largePhoto" alt="旅行回忆"><figcaption id="photoCaption"></figcaption></figure><button id="nextPhoto" class="lightbox-next icon-btn" aria-label="下一张">›</button><button id="deletePhoto" class="delete-photo">删除这张照片</button></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>/*__THREE__*/</script><script>/*__GLOBE__*/</script><script>/*__FLIPBOOK__*/</script><script>const MAP_DATA=/*__MAP__*/;const EARTH_TEXTURE='/*__EARTH__*/';const PLANET_TEXTURES=/*__PLANETS__*/;</script><script>/*__APP__*/</script>
+</body></html>

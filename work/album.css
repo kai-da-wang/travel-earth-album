@@ -1,0 +1,25 @@
+.memory-panel{min-width:0}
+.album-book{margin:5px -9px 0}
+.album-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 9px 10px;font-size:12px;color:#d1bd99}
+.album-heading span:last-child{font-size:10px;color:#8198aa}
+.gallery{position:relative;display:flex;gap:14px;padding:12px 16px 17px;max-height:none;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:16px;overscroll-behavior-x:contain;scrollbar-width:none;touch-action:pan-x pan-y;cursor:grab;user-select:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery .photo-card{flex:0 0 calc(100% - 32px);min-width:0;display:block;scroll-snap-align:center;scroll-snap-stop:always;background:#e9dfcd;padding:9px 9px 0;border:1px solid #fff3;border-radius:5px;box-shadow:0 7px 15px #0005;transform:scale(.96) rotate(1deg);opacity:.65;transition:transform .25s,opacity .25s;cursor:grab;color:#3d413f}
+.gallery .photo-card.current{transform:scale(1);opacity:1}
+.gallery .photo-card img,.gallery .photo-card:first-child img{display:block;width:100%;height:205px;object-fit:cover;border-radius:2px;pointer-events:none;transform:none}
+.gallery .photo-card:hover img{transform:none}
+.gallery .photo-card:active{transform:scale(1)}
+.gallery .photo-card:hover{filter:none}
+.gallery .card-caption{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 4px 15px;font-family:'SimSun',serif;font-size:15px;letter-spacing:2px}
+.card-caption>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card-caption>span:last-child{font:12px Georgia,serif;color:#7c715e}
+.gallery.dragging{cursor:grabbing;scroll-snap-type:none}
+.gallery.dragging .photo-card{cursor:grabbing}
+.album-navigation{display:flex;align-items:center;justify-content:center;gap:26px;padding:0 0 5px}
+.album-navigation .icon-btn{width:32px;height:32px;font-size:24px;color:#d3bd97}
+.album-navigation button:disabled{opacity:.25;cursor:default}
+#albumCounter{font:12px Consolas,monospace;letter-spacing:2px;color:#b1c5d3;min-width:66px;text-align:center}
+.delete-region{display:block;width:100%;padding:3px 0 16px;font-size:12px;color:#c69791;background:transparent}
+.delete-region:hover{color:#efb6ad}
+#lightbox figure{touch-action:pan-y pinch-zoom}
+@media(max-width:760px){.gallery .photo-card img,.gallery .photo-card:first-child img{height:235px}.album-heading{font-size:13px}.album-heading span:last-child{font-size:11px}.delete-region{font-size:13px;padding:6px 0 18px}.album-navigation .icon-btn{width:40px;height:40px}}

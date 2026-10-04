@@ -1,0 +1,40 @@
+/* Warm paper, deep navy book cloth, and an uncluttered physical reader. */
+.physical-gallery.gallery{display:block!important;position:relative;max-height:none!important;overflow:visible!important;padding:0!important;margin:0!important;scroll-snap-type:none!important;perspective:none!important;background:none!important;gap:0!important}
+.book-preview-stage{height:219px;position:relative;margin:0 -8px;background:radial-gradient(ellipse at 52% 53%,#b2966622,transparent 67%);border-radius:10px}
+.physical-book-canvas{display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab;border-radius:9px;outline-offset:-6px!important}
+.physical-book-canvas.is-dragging{cursor:grabbing;touch-action:none}
+.physical-gallery .open-physical-book{width:100%;height:39px;margin:4px 0 2px;padding:0 13px!important;display:flex;align-items:center;justify-content:space-between;border:1px solid #90774e80!important;border-radius:6px!important;background:linear-gradient(110deg,#5f4b3029,#172334)!important;color:#dcc398;font-size:12px;letter-spacing:1px;overflow:visible!important}
+.open-physical-book span{font-size:17px;color:#e1c388}
+.book-accessible-pages{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.book-accessible-pages:focus-within{position:absolute;bottom:2px;left:4px;right:4px;width:auto;height:auto;overflow:visible;clip-path:none;z-index:2;display:flex;justify-content:center;gap:5px}
+.book-photo-accessible{background:#243a4e!important;color:#fff5dd;padding:8px!important;border-radius:5px!important;font-size:11px}
+.album-book .album-navigation{padding-top:10px!important}.album-book .album-navigation button:disabled{cursor:default;opacity:.24}.album-book .album-navigation>span{font-size:10px;letter-spacing:2px}
+body.reading-physical-album{overflow:hidden}
+.physical-book-dialog{width:min(1320px,96vw);height:min(930px,94dvh);max-width:none;max-height:94dvh;border:1px solid #fff6df66;border-radius:14px;padding:0;background:#eee7d9;color:#263340;overflow:hidden;box-shadow:0 40px 160px #000c}
+.physical-book-dialog::backdrop{background:#010710d9;backdrop-filter:blur(14px)}
+.physical-book-header{height:111px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 38px 16px;background:linear-gradient(100deg,#f4eedf,#eee7d9);border-bottom:1px solid #79613d19;position:relative;z-index:2}
+.physical-book-eyebrow{font:9px Arial,sans-serif;letter-spacing:3.2px;color:#90774f}.physical-book-header h2{font:400 25px "Songti SC","STSong","SimSun",serif;letter-spacing:3px;margin:9px 0 7px;color:#243a47}.physical-book-description{font-size:10px;color:#8d8070;letter-spacing:1.2px;margin:0}
+.physical-book-close{border:1px solid #263a482b;width:39px;height:39px;min-width:39px;border-radius:50%;display:grid;place-items:center;background:#fcf7ed60;color:#4b585c;font-size:25px;font-weight:300}.physical-book-close:hover{background:#fffaf1}
+.physical-book-stage{height:calc(100% - 209px);position:relative;isolation:isolate;background:radial-gradient(ellipse at 50% 40%,#faf6eb 0%,#f0e9db 48%,#e2d8c6 100%);overflow:hidden}
+.physical-book-stage::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.09;background-image:repeating-linear-gradient(91deg,#ad94751a 0,#ad94751a 1px,transparent 1px,transparent 4px),repeating-linear-gradient(1deg,#ad94751a 0,#ad94751a 1px,transparent 1px,transparent 4px)}
+.physical-book-stage .physical-book-canvas{border-radius:0}
+.physical-book-footer{height:98px;padding:11px 20px 16px;background:linear-gradient(#ede5d6,#f3ecde);display:flex;flex-direction:column;align-items:center;gap:12px;border-top:1px solid #7e69441a}
+.physical-book-navigation{display:flex;align-items:center;gap:23px}.physical-book-nav{width:43px;height:36px;background:#223747;border:1px solid #1a2d3c;border-radius:7px;color:#f6e4be;display:grid;place-items:center;font:25px Georgia,serif;padding-bottom:3px;box-shadow:0 2px 5px #22374712}.physical-book-nav:disabled{background:#c3b8a4;color:#eeeadf;border-color:#bbae9620;opacity:.48;cursor:default}.physical-book-counter{font-size:11px;letter-spacing:1.3px;color:#76664e;min-width:145px;text-align:center}.physical-book-hint{margin:0;color:#93806a;font-size:10px;letter-spacing:1px}
+.physical-book-fallback{height:100%;display:flex;gap:14px;overflow:auto;align-items:center;padding:20px}.physical-book-fallback p{font-size:12px;color:#917e67}.book-fallback-photo{min-width:170px;width:220px;background:#f8f0e1!important;padding:12px!important;border-radius:2px!important}.book-fallback-photo img{max-width:100%;height:200px!important;object-fit:contain!important}
+@media(max-width:760px){.book-preview-stage{height:264px;margin:0 -8px}.physical-book-dialog{width:100%;max-width:100%;height:100dvh;max-height:100dvh;border:0;border-radius:0}.physical-book-header{height:99px;padding:17px 20px 13px}.physical-book-header h2{font-size:21px;letter-spacing:2px}.physical-book-description{font-size:9px}.physical-book-stage{height:calc(100% - 200px)}.physical-book-footer{height:101px;padding-top:14px}.physical-book-hint{font-size:9px;letter-spacing:.3px}.physical-book-navigation{gap:18px}.physical-book-nav{width:45px;height:38px}.physical-book-counter{min-width:131px}}
+@media(prefers-reduced-motion:reduce){.physical-book-canvas{scroll-behavior:auto}.physical-book-dialog::backdrop{backdrop-filter:none}}
+.physical-book-dialog[open]{display:flex;flex-direction:column}
+.physical-book-header,.physical-book-footer{flex-shrink:0}
+.physical-book-stage{flex:1;min-height:0;height:auto}
+.physical-book-actions{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.physical-book-header>div:first-child{min-width:0}.physical-book-header h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.book-index-toggle{padding:9px 13px;border:1px solid #b5a68b;border-radius:6px;background:#fffaf166;color:#4d5149;font:12px "Microsoft YaHei",sans-serif;white-space:nowrap}
+.book-index-toggle:hover,.book-index-toggle[aria-expanded=true]{background:#e1d6c2;border-color:#927a52}
+.book-photo-index{flex:0 0 96px;display:flex;align-items:center;gap:12px;padding:10px 30px;overflow-x:auto;overflow-y:hidden;background:#e6dece;border-top:1px solid #c6b99e;scrollbar-width:thin;scrollbar-color:#ad9c7d transparent}
+.book-photo-index[hidden]{display:none}
+.book-index-photo{position:relative;flex:0 0 62px;height:72px;padding:4px 4px 17px;background:#f9f4e8;border:1px solid #cec2aa;border-radius:3px;box-shadow:0 2px 5px #51422b15}
+.book-index-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.book-index-photo span{position:absolute;bottom:2px;left:0;right:0;text-align:center;font:10px Georgia,serif;color:#766044}
+.book-index-photo[aria-current=true]{outline:2px solid #7a613a;outline-offset:2px;box-shadow:0 3px 12px #51422b30}
+.book-index-photo:focus-visible,.book-index-toggle:focus-visible{outline:2px solid #1c526b;outline-offset:3px}
+@media(max-width:760px){.physical-book-actions{gap:8px}.book-index-toggle{padding:8px;font-size:11px}.physical-book-header{gap:8px}.physical-book-header h2{font-size:19px;letter-spacing:1px}.book-photo-index{flex-basis:88px;padding:8px 18px;gap:11px}.book-index-photo{height:66px;flex-basis:57px}}

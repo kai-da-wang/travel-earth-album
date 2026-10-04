@@ -1,0 +1,18 @@
+.cosmic-backdrop{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 54% 53%,#0a18272e,transparent 72%)}
+.universe .intro{text-shadow:0 2px 20px #01050e,0 2px 6px #01050e}
+.universe .intro .eyebrow,.universe .intro p{color:#a0b3c3}
+.globe-caption,.legend,.gesture-hint{text-shadow:0 1px 5px #01050e,0 1px 10px #01050e}
+.solar-caption{position:absolute;transform:translateX(-50%);pointer-events:none;white-space:nowrap;font:10px 'Microsoft YaHei',sans-serif;color:#8596a6;letter-spacing:3px;text-shadow:0 1px 4px #000;opacity:.76}
+.marker.compact{font-size:0;padding:9px;min-width:23px;min-height:23px}
+.marker.compact::before{margin-right:0}
+.marker.compact:hover,.marker.compact:focus-visible{font-size:11px;background:#071522e8;border-radius:12px;z-index:2}
+.marker.compact:hover::before,.marker.compact:focus-visible::before{margin-right:5px}
+@media(max-width:760px){.solar-caption{font-size:9px;letter-spacing:2px;opacity:.6}.globe-caption{display:none}}
+.marker.map-city{width:12px;height:12px;padding:0;position:relative;font:11px "Microsoft YaHei",sans-serif;background:none;border:0;color:#c8b994}
+.marker.map-city::before{position:absolute;left:4px;top:4px;width:4px;height:4px;margin:0;background:#b7a47d;box-shadow:none}
+.map-city .marker-name{position:absolute;left:var(--label-x,10px);top:var(--label-y,-10px);padding:4px 5px;line-height:15px;max-width:168px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-shadow:0 1px 4px #000,0 0 7px #05101d}
+.marker.map-city.saved{color:#c4f4ff}.marker.map-city.saved::before{width:6px;height:6px;left:3px;top:3px;background:#c5f5ff;box-shadow:0 0 8px 3px #5bcaff88}
+.marker.map-city.active .marker-name{color:#fff2cd;font-weight:bold;background:#07132385;border-radius:4px}
+.marker-link{position:absolute;left:6px;top:6px;transform-origin:left center;border-top:1px solid #a2dcec66;pointer-events:none}
+.map-city.label-hidden .marker-name,.map-city.label-hidden .marker-link{visibility:hidden}.map-city.reference.label-hidden,.map-city.back-city{opacity:0;pointer-events:none}
+.map-city.label-hidden.saved:hover .marker-name,.map-city.label-hidden.saved:focus-visible .marker-name{visibility:visible;background:#071323ee;left:10px;top:-10px;border-radius:4px}
